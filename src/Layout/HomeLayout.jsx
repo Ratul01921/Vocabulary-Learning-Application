@@ -1,9 +1,14 @@
 import React from 'react';
+import Header from '../Components/Header/Header';
+import { Outlet } from 'react-router-dom';
+import Footer from '../Components/Footer';
 
 const HomeLayout = () => {
     return (
-        <div>
-            <h1 className='btn text-red-700'>this is Home Layout</h1>
+        <div className='w-11/12 mx-auto my-4'>
+            <Header></Header>
+            <Outlet></Outlet>
+            <Footer></Footer>
         </div>
     );
 };
