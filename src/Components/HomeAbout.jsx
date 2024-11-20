@@ -8,7 +8,7 @@ import { GiProgression } from 'react-icons/gi';
 
 const HomeAbout = () => {
     return (
-        <div className="py-12 bg-gray-200">
+        <div className="py-12 bg-base-200">
             <div className="max-w-5xl mx-auto text-center">
                 <h2 className="text-3xl font-semibold text-gray-800 mb-4">
                     How You Can Learn Vocabulary with Us
@@ -17,7 +17,7 @@ const HomeAbout = () => {
                     Learning new vocabulary should be fun, interactive, and rewarding. Here’s how you can start building your vocabulary:
                 </p>
 
-                <div className="space-y-6 grid grid-cols-3 gap-6 justify-between items-center h-full">
+                <div className="space-y-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-between items-center h-full">
                     <div className="flex flex-col gap-2 items-start space-x-4 p-6 bg-[#E7C1D3]">
                         <div className="w-12 h-12 bg-blue-500 rounded-full text-white flex items-center justify-center">
                         <TbVocabulary></TbVocabulary>
