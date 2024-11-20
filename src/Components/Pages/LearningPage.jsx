@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const LearningPage = ({ lesson }) => {
     const { lesson_no, category, word } = lesson;
-    console.log(lesson);
+    // console.log(lesson);
     return (
 
         <Link to={`/lesson/${lesson_no}`}>

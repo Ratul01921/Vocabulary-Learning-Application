@@ -40,7 +40,8 @@ import Lesson from "../Components/Pages/Lesson";
             loader: async ({params})=>{
                 const res = await fetch('/data.json')
                 const data = await res.json()
-                console.log(data, params)
+                const lessonData = data.filter(d=> d.lesson_no ==params.id)
+                return lessonData
             }
         }
       ]
