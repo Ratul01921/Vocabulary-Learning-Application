@@ -7,6 +7,7 @@ import About from "../Components/LayoutComponents/About";
 import StartLearning from "../Components/LayoutComponents/StartLearning";
 import Tutorials from "../Components/LayoutComponents/Tutorials";
 import Home from "../Components/LayoutComponents/Home";
+import Lesson from "../Components/Pages/Lesson";
 
 
   const router = createBrowserRouter([
@@ -24,11 +25,23 @@ import Home from "../Components/LayoutComponents/Home";
         },
         {
             path: '/startLearning',
-            element: <StartLearning></StartLearning>
+            element: <StartLearning></StartLearning>,
+            loader:()=> fetch('/lesson.json')
+            
         },
+
         {
             path: '/tutorials',
             element: <Tutorials></Tutorials>
+        },
+        {
+            path: '/lesson/:id',
+            element: <Lesson></Lesson>,
+            loader: async ({params})=>{
+                const res = await fetch('/data.json')
+                const data = await res.json()
+                console.log(data, params)
+            }
         }
       ]
     },

@@ -1,0 +1,63 @@
+[
+    {
+      "id": "1",
+      "word": "ご飯",
+      "lesson_no": 1,
+      "category": "Food"
+    },
+    {
+      "id": "2",
+      "word": "水",
+      "lesson_no": 2,
+      "category": "Beverage"
+    },
+    {
+      "id": "3",
+      "word": "テレビ",
+      "lesson_no": 3,
+      "category": "Device"
+    },
+    {
+      "id": "4",
+      "word": "携帯電話",
+      "lesson_no": 4,
+      "category": "Gadget"
+    },
+    {
+      "id": "5",
+      "word": "自転車",
+      "lesson_no": 5,
+      "category": "Transport"
+    },
+    {
+      "id": "6",
+      "word": "電車",
+      "lesson_no": 6,
+      "category": "Vehicle"
+    },
+    {
+      "id": "7",
+      "word": "病院",
+      "lesson_no": 7,
+      "category": "Healthcare"
+    },
+    {
+      "id": "8",
+      "word": "薬",
+      "lesson_no": 8,
+      "category": "Medicine"
+    },
+    {
+      "id": "9",
+      "word": "喜び",
+      "lesson_no": 9,
+      "category": "Feeling"
+    },
+    {
+      "id": "10",
+      "word": "怒り",
+      "lesson_no": 10,
+      "category": "Emotion"
+    }
+  ]
+  
