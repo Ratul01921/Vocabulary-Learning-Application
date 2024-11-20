@@ -15,11 +15,11 @@ import Home from "../Components/LayoutComponents/Home";
       element: <HomeLayout></HomeLayout>,
       children:[
         {
-            path: '/about',
+            path: '/',
             element: <Home></Home>
         },
         {
-            path: '/',
+            path: '/about',
             element: <About></About>
         },
         {
