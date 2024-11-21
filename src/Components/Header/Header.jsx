@@ -1,8 +1,12 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from '../../assets/arabic_6212766.png'
+import { useContext } from "react";
+import { AuthContext } from "../../Provider/Provider";
 
 
 const Header = () => {
+    const {user, logOut} = useContext(AuthContext);
+    console.log(user);
 
     const Links = <>
         <li><NavLink to='/'>Home</NavLink></li>
@@ -37,15 +41,23 @@ const Header = () => {
                 </div>
                 <img className="w-16 h-16 object-cover" src={logo} alt="" />
                 <a className="text:lg md:text-xl lg:text-2xl font-bold ml-2">Lingo Bingo</a>
+                
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
                     {Links}
                 </ul>
             </div>
-            <div className="navbar-end">
-                <a className="btn">Button</a>
-            </div>
+            {
+                user && user?.email ? ( <div className="navbar-end">
+                    <p>{user && user.email} </p> 
+                    <button onClick={logOut} className="btn" >Log-Out</button>
+                </div>) : (<div className="navbar-end">
+                    <Link className="btn" to='/auth/login'>LogIn</Link>
+                </div>)
+            }
+                
+            
         </div>
     );
 };

@@ -8,6 +8,8 @@ import StartLearning from "../Components/LayoutComponents/StartLearning";
 import Tutorials from "../Components/LayoutComponents/Tutorials";
 import Home from "../Components/LayoutComponents/Home";
 import Lesson from "../Components/Pages/Lesson";
+import Login from "../Components/Pages/Login";
+import Register from "../Components/Pages/Register";
 
 
   const router = createBrowserRouter([
@@ -33,6 +35,14 @@ import Lesson from "../Components/Pages/Lesson";
         {
             path: '/tutorials',
             element: <Tutorials></Tutorials>
+        },
+        {
+            path: '/auth/login',
+            element: <Login></Login>
+        },
+        {
+            path: '/auth/register',
+            element: <Register></Register>
         },
         {
             path: '/lesson/:id',

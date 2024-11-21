@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const LessonData = ({ lesson }) => {
     const [isModalOpen, setModalOpen] = useState(false);
-    console.log(lesson);
+    // console.log(lesson);
     return (
         <div className="bg-base-200 shadow-lg rounded-md p-4 w-full max-w-sm mx-auto">
             <h2 className="text-xl font-bold mb-2">
