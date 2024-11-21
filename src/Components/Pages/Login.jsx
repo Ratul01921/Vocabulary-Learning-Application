@@ -1,13 +1,27 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Provider/Provider';
+import { toast } from 'react-toastify';
 
 const Login = () => {
+    const {loginUser, setUser} = useContext(AuthContext);
+    const [err, setErr] = useState([])
 
     const handleLogin = e =>{
         e.preventDefault();
         const email = e.target.email.value;
         const password = e.target.password.value;
         console.log(email, password);
+
+        loginUser(email, password)
+        .then((result) =>{
+            const user = result.user;
+            setUser(user)
+        })
+        .catch((error) => {
+            alert(error.message)
+            
+        })
 
         
 }
