@@ -10,6 +10,8 @@ import Home from "../Components/LayoutComponents/Home";
 import Lesson from "../Components/Pages/Lesson";
 import Login from "../Components/Pages/Login";
 import Register from "../Components/Pages/Register";
+import PrivetRoute from "./PrivetRoute";
+import UpdateProfile from "../Components/Pages/UpdateProfile";
 
 
   const router = createBrowserRouter([
@@ -45,8 +47,16 @@ import Register from "../Components/Pages/Register";
             element: <Register></Register>
         },
         {
+            path: '/updateProfile',
+            element: <PrivetRoute>
+              <UpdateProfile></UpdateProfile>
+            </PrivetRoute>
+        },
+        {
             path: '/lesson/:id',
-            element: <Lesson></Lesson>,
+            element: <PrivetRoute>
+              <Lesson></Lesson>
+            </PrivetRoute>,
             loader: async ({params})=>{
                 const res = await fetch('/data.json')
                 const data = await res.json()

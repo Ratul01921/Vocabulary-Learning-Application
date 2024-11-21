@@ -5,7 +5,7 @@ import { AuthContext } from "../../Provider/Provider";
 
 
 const Header = () => {
-    const {user, logOut} = useContext(AuthContext);
+    const {user, logOut, } = useContext(AuthContext);
     console.log(user);
 
     const Links = <>
@@ -13,6 +13,13 @@ const Header = () => {
         <li><NavLink to='/startLearning'>Start Learning</NavLink></li>
         <li><NavLink to='/tutorials'>Tutorials</NavLink></li>
         <li><NavLink to='/about'>About Us</NavLink></li>
+        {
+            user && user.email ? <>
+            <li><NavLink to='/updateProfile'>Update Profile</NavLink></li>
+            </>: <>
+            <li><NavLink to='/auth/register'>Register</NavLink></li>
+             </>
+        }
     </>
 
     return (
@@ -50,10 +57,11 @@ const Header = () => {
             </div>
             {
                 user && user?.email ? ( <div className="navbar-end">
-                    <p>{user && user.email} </p> 
-                    <button onClick={logOut} className="btn" >Log-Out</button>
+                    <img className="w-14 h-14 object-cover rounded-full" src={user?.photoURL} alt={user?.displayName} />
+                    
+                    <button onClick={logOut} className="btn btn-neutral" >Log-Out</button>
                 </div>) : (<div className="navbar-end">
-                    <Link className="btn" to='/auth/login'>LogIn</Link>
+                    <Link className="btn btn-neutral" to='/auth/login'>LogIn</Link>
                 </div>)
             }
                 
