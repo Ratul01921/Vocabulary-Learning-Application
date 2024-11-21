@@ -15,7 +15,7 @@ const Header = () => {
         <li><NavLink to='/about'>About Us</NavLink></li>
         {
             user && user.email ? <>
-            <li><NavLink to='/updateProfile'>Update Profile</NavLink></li>
+            <li><NavLink to='/updateProfile'>My Profile</NavLink></li>
             </>: <>
             <li><NavLink to='/auth/register'>Register</NavLink></li>
              </>
