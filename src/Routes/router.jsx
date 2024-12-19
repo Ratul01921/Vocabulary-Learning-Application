@@ -36,7 +36,7 @@ import UpdateProfile from "../Components/Pages/UpdateProfile";
 
         {
             path: '/tutorials',
-            element: <Tutorials></Tutorials>
+            element: <PrivetRoute><Tutorials></Tutorials></PrivetRoute>
         },
         {
             path: '/auth/login',
