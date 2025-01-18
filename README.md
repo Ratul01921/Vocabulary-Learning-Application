@@ -4,7 +4,7 @@
 The Vocabulary Learning App is designed to help users learn new vocabulary in a fun and interactive way. It offers lessons with a dynamic display of words, meanings, pronunciations, and contextual usage. The app also features a "When to say?" modal to provide users with additional context for each word.
 
 ## Live URL
-[Live URL]
+https://vocabulary-learning-a5e09.web.app/
 
 ## Key Features
 - **10 Static Lessons**: Each lesson includes a unique vocabulary word with pronunciation, meaning, difficulty, and part of speech.
